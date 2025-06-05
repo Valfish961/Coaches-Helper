@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Novice</title>
+    <link rel="stylesheet" href="styles/advance-novice-responsive.css">
+  </head>
+
+  <body>
+
+    <div class="title-container">
+      <h3>Advance Novice</h3>
+      <h4>Shortcut Rules for Season 2025-2026</h4>
+    </div>
+
+<!-- Devide page on two main parts -->
+    <div class="grid-container">
+      <div> <!--each part consist short program girls and short program boys-->
+        <h3 class="art-writing">Short Program</h3>
+
+        <div class="group-grid-container"> 
+          <div class="js-sp-buttons-container">
+            <button class="participant-buttons js-sp-buttons-girls">Girls</button>
+            <div class="buttons-grid-container js-sp-main-buttons-girls"></div>
+            <div class="short-cut-rules js-short-cut-rules-girls"></div>
+          </div>
+          
+          <div class="js-sp-buttons-container">
+            <button class="participant-buttons js-sp-buttons-boys">Boys</button>
+            <div class="buttons-grid-container js-sp-main-buttons-boys"></div>
+            <div class="short-cut-rules js-short-cut-rules-boys"></div>
+          </div>
+        </div>
+      </div>
+
+      <div> <!--each part consist free program girls and free program boys-->
+        <h3 class="art-writing">Free Program</h3>
+
+        <div class="group-grid-container">
+          <div class="js-buttons-container"> <!--* watch below code-->
+            <button class="participant-buttons js-fp-buttons-girls">Girls</button>
+            <div class="buttons-grid-container js-fp-main-buttons-girls"></div>
+            <div class="short-cut-rules js-fp-shortcut-rules-girls"></div>
+          </div>
+          
+          <div class="js-buttons-container">
+            <button class="participant-buttons js-fp-buttons-boys">Boys</button>
+            <div class="buttons-grid-container js-fp-main-buttons-boys"></div>
+            <div class="short-cut-rules js-fp-shortcut-rules-boys"></div> 
+          </div> <!--*-->
+        </div>
+      </div>
+      
+    </div>
+    </div>
+
+    <script src="texts/rule-texts.js"></script>
+    <script src="scripts/advance-novice-gpt.js"></script>
+   
+  </body>
+</html>
+
+
+<!--To avoid the repetition of this code here is solution
+<div class="js-buttons-container">
+  <button class="participant-buttons js-fp-buttons-girls" data-target=".js-main-buttons-girls">Girls</button>
+  <div class="buttons-grid-container js-main-buttons-girls"></div>
+</div>
+
+<div class="js-buttons-container">
+  <button class="participant-buttons js-fp-buttons-boys" data-target=".js-main-buttons-boys">Boys</button>
+  <div class="buttons-grid-container js-main-buttons-boys"></div>
+</div>
+-->

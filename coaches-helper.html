@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coaches Helper</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <!-- <link rel="stylesheet" href="styles/header-fixed.css">
+    <link rel="stylesheet" href="styles/upload-video.css"> -->
+  </head>
+
+  <body>
+    <div class="header js-header"></div>
+
+    <div class="main-content">
+      <p class="text-for-link">For detailed rules Basic, Intermedia and Advance Novice <a href="https://isu-d8g8b4b7ece7aphs.a03.azurefd.net/isudamcontainer/CMS/Corporate-Site/Governance/Transparency/ISU-Communications/2699-SP-Novice-Competitions-2025-2026-1744291808-1629.pdf" target="_blank"><span class="link">ISU Communication 2699.</span></a></p>
+
+  <!-- Folder management section -->
+      <!-- <div class="folder-container">
+        <h2>Manage Folders</h2>
+        <label for="folderInput">Folder Name:</label>
+        <input type="text" id="folderInput" placeholder="Enter folder name">
+        <button id="createFolder">Create Folder</button>
+
+        <h3>Folders</h3>
+        <div id="folderList"></div>
+      </div> -->
+
+  <!-- Upload video section -->
+      <div class="video-upload-container">
+        <h2>Upload Your Video:</h2>
+        <input type="file" id="videoInput" accept="video/*" multiple>
+      </div>
+      <div id="previewSection">
+        <h2>Preview</h2>
+        <div id="videoPreview"></div>
+        <button id="saveVideos" disabled>Save Videos</button>
+
+        <h2 class="saved-videos">Saved Videos</h2>
+        <div id="videoGallery"></div>
+      </div>
+    </div>
+    
+    <script src="scripts/header.js"></script>
+    <script src="scripts/upload-video-with-input.js"></script>
+  </body>
+</html>
