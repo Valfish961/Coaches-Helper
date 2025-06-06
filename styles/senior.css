@@ -138,8 +138,9 @@ li {
   }
 
   .art-writing {
-    font-size: 28px;
-    padding: 10px;
+    /*font-size: 28px;*/
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    padding: 12px;
   }
 
   .main-buttons {
@@ -160,13 +161,20 @@ li {
     grid-template-columns: 1fr;
   }
 
-  .main-buttons,
+  /*.main-buttons,
   .participant-buttons {
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 10px;
+  }*/
+  .participant-buttons {
+    padding: 12px;
+    font-size: 14px
   }
-
+  .main-buttons {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
   .art-writing {
     font-size: 24px;
   }
