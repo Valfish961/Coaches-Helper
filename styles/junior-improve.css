@@ -115,6 +115,14 @@ li {
 
 /* Responsive Tweaks */
 @media (max-width: 768px) {
+  .grid-container,
+  .group-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .buttons-grid-container,
+  .buttons-grid-fp-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .art-writing {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     padding: 12px;
@@ -133,6 +141,10 @@ li {
 }
 
 @media (max-width: 480px) {
+  .buttons-grid-container,
+  .buttons-grid-fp-container {
+    grid-template-columns: 1fr;
+  }
   .art-writing {
     font-size: 24px;
   }
