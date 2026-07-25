@@ -1,0 +1,139 @@
+/* ───────────────────────────┐
+   Base styles (≥ 1025 px)    │
+   ───────────────────────────┘*/
+:root {
+  --clr-bg: #dedede;        /* darkgrey keyword is hard to override later */
+  --clr-title: red;
+  --clr-accent: #6A5ACD;
+  --clr-btn-main: green;
+  --transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--clr-bg);
+  text-align: center;
+}
+
+h3 { color: var(--clr-title); }
+
+.title-container    { margin-top: 40px; }
+
+.grid-container,
+.group-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container       { margin-top: 50px; }
+.group-grid-container { margin-top: 15px; }
+
+.buttons-grid-container {          /* program duration, jumps, etc. */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin: 20px 5px 0;
+}
+
+.art-writing {                      /* “Short program” / “Free program” */
+  font-family: "Brush Script MT", cursive;
+  font-size: 36px;
+  color: var(--clr-accent);
+  text-shadow: 2px 2px 5px rgba(0,0,0,.5), 0 0 10px rgba(255,255,255,.8);
+  letter-spacing: 2px;
+  background: rgb(255,110,110);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.short-cut-rules {
+  margin: 30px 5px 0;
+  text-align: start;
+}
+
+.participant-buttons,
+.main-buttons {
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.participant-buttons {
+  padding: 20px;
+  background: rgb(43,42,42);
+  color: #fff;
+  font-weight: 600;
+  border: 0;
+  border-radius: 50%;
+}
+.participant-buttons:hover         { opacity: .5; }
+.participant-buttons:hover,
+.participant-buttons:focus-visible { font-size: 18px; }
+.participant-buttons:active        { transform: scale(.92); }
+
+.main-buttons {
+  background: var(--clr-btn-main);
+  border: 0;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+}
+.main-buttons:hover           { opacity: .5; color: #fff; }
+.main-buttons:active          { transform: scale(.94); }
+.main-buttons:focus-visible   { outline: 3px solid #fff; outline-offset: 2px; }
+
+span { font-weight: bold; text-decoration: underline; }
+li   { margin-top: 15px; }
+
+/* Respect users that prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .participant-buttons,
+  .main-buttons { transition: none; }
+}
+
+/* ───────────────────────────┐
+   Tablets  (≤ 1024 px)       │
+   ───────────────────────────┘*/
+@media (max-width: 1024px) {
+  .grid-container              { grid-template-columns: 1fr; }
+  .group-grid-container        { grid-template-columns: 1fr 1fr; }
+  .buttons-grid-container      { grid-template-columns: repeat(2, 1fr); }
+  .participant-buttons         { padding: 18px; }
+  .main-buttons                { font-size: 14px; }
+}
+
+/* ───────────────────────────┐
+   Large phones / phablets    │
+   (≤ 768 px)                 │
+   ───────────────────────────┘*/
+@media (max-width: 768px) {
+  h3                 { font-size: 1.35rem; }
+  .art-writing       { font-size: 30px; margin: 16px 10px; }
+  .group-grid-container { grid-template-columns: 1fr; }
+  .buttons-grid-container { grid-template-columns: 1fr 1fr; }
+}
+
+/* ───────────────────────────┐
+   Small phones  (≤ 600 px)   │
+   ───────────────────────────┘*/
+@media (max-width: 600px) {
+  .grid-container,
+  .group-grid-container,
+  .buttons-grid-container { grid-template-columns: 1fr; }
+
+  .buttons-grid-container { gap: 8px; }
+
+  .participant-buttons    { padding: 14px; font-size: 14px; }
+  .main-buttons           { width: 100%; }
+
+  .short-cut-rules        { font-size: 0.9rem; }
+  h3                      { font-size: 1.2rem; }
+  .art-writing            { font-size: 26px; }
+}

@@ -1,0 +1,271 @@
+/*===Global Style===*/
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/*===Sidebar===*/
+.general-container {
+  display: flex;
+}
+
+.sidebar-buttons-container {
+  width: 180px;
+  background-color: #2c3e50;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.side-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #82c082;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(14px, 2vw, 20px); /* Scales text */
+  box-shadow: 4px 4px 8px #c9c9c9, -4px -4px 8px #ffffff;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  min-width: 100px;
+  flex-grow: 1;
+  text-align: center;
+  color: #fff;
+  width: 150px;
+  margin-left: 9px;
+}
+
+.side-bar-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/*===Content Area===*/
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/*Left side elements*/
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.elements-btn,
+.spins-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Jumps/Spins Element Buttons*/
+.element-group,
+.spin-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.element,
+.spin-category {
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(165, 207, 193);
+  font-weight: 600;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.element {
+  width: 60px;
+}
+
+.spin-category {
+  width: 150px;
+  height: 50px;
+}
+
+.element:hover, 
+.spin-category:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* Dropdown Rotation Buttons */
+.rotation, .spin {
+  display: block;
+  background-color: rgb(205, 204, 204);
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+span {
+  color: rgb(247, 85, 85);
+  font-size: 14px;
+}
+
+/* GOE & Level Buttons */
+.goe,
+.level {
+  border-radius: 50%;
+  border: solid 1px lightgray;
+  cursor: pointer;
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: rgb(165, 202, 202);
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+/* Right side container */
+.right-side {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* margin-left: 80px; */
+  margin-left: 0;
+}
+
+/*=== Table ===*/
+table {
+  width: 80%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr.highlight {
+  background-color: #d0f0ff;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+
+/*=== Responsive ===*/
+/* @media (max-width: 600px) {
+  .content-area {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .right-side {
+    margin-left: 0;
+    padding: 0 12px;
+  }
+
+  table {
+    width: 100%;
+  }
+} */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .general-container {
+    flex-direction: column;
+  }
+
+  .sidebar-buttons-container {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .side-bar-btn {
+    flex: none;
+    width: auto;
+    min-width: 120px;
+  }
+
+  .content-area {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .right-side {
+    padding: 0 10px;
+  }
+  /* table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  } */
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  button {
+    font-size: 14px;
+  }
+
+  .side-bar-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+}

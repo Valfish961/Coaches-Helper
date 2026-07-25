@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar and Planning</title>
+    <link rel="stylesheet" href="styles/planning-page.css">
+</head>
+
+<body>
+        
+    <div id="calendar">
+        <h2 id="monthYear"></h2>
+        <div class="navigation">
+            <button onclick="prevMonth()">Previous</button>
+            <button onclick="nextMonth()">Next</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody">
+                    <!-- Calendar days will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div class="second-container">
+        <h2 class="enter-plan">Enter your plan:</h2>
+        <textarea class="js-name-input textarea-input"></textarea>
+        <!--<pre id="outputText"></pre>--> <!--for display text same way-->
+
+        <input type="date" class="date-input js-date-input">
+        <button onclick="
+            addTask();
+        " class="add-button js-add-button">Add to Calendar</button>
+        <!-- <div class="js-taskList task-container"></div> -->
+    </div>
+
+    <!-- <div id="task">
+        <div><h2 class="next-task">Click on a date in the calendar to view the task.</h2></div>
+        <div class="coming-task">
+            <h2>Coming Task</h2>
+        </div>
+        <div><button>Delete</button></div>
+    </div> -->
+
+    <div class="third-container">
+        <h2 class="enter-plan">To view your task click on corresponding date at calendar</h2>
+        <div class="js-taskList task-container"></div>
+    </div>
+    
+    <script src="scripts/planning-page.js"></script>
+
+</body>
+</html>
